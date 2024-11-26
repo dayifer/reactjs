@@ -1,2 +1,2 @@
-# reatjs
+# reactjs
 Practicas Funcionales React JS
