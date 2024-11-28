@@ -22,4 +22,40 @@ function App() {
   );
 }
 
-export default App;
+function MyButton() {
+  return (
+      <button>Soy un botón</button>
+  );
+}
+
+function formatName(user) {
+    return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+    firstName: 'Dayana',
+    lastName: 'Carolina'
+};
+
+/*const element = (
+    <h1>
+        Hello, {formatName(user)}!  </h1>
+);*/
+
+function getGreeting(user) {
+    if (user) {
+        return <h1>Hello, {formatName(user)}!</h1>;  }
+    return <h1>Hello, Stranger.</h1>
+}
+
+export default function MyApp() {
+    return (
+        <div>
+            <h1>Bienvenido a mi aplicación {formatName(user)}! </h1>
+            <h1>Hey {getGreeting(user)} </h1>
+            <MyButton/>
+        </div>
+    );
+};
+
+//export default App;
